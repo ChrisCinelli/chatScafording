@@ -1,10 +1,137 @@
+/* Responsive media queries */
+/*
+  .profile-pic {
+    float: left;
+    width: 250px;
+    @include respond-to(handhelds) { width: 100% ;}
+    @include respond-to(medium-screens) { width: 125px; }
+    @include respond-to(wide-screens) { float: none; }
+  }
+*/
+/* Here we go */
+*, :after, :before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
 body {
-  align-items: center;
-  background: #f0f8ff;
-  display: flex;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  height: 100vh;
-  justify-content: center; }
-  body h1 {
-    font-size: 32px;
-    text-align: center; }
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* No layout */
+  /*
+  <div class="app">
+    <div class="nav">
+      item 1 - item 2 - item3
+    </div>
+    <div class="email-confirm">
+      Verify your email
+    </div>
+    <div class="content">
+      <div class="landing">
+      </div>
+      <div class="chat">
+        <div class="leftpane">
+        </div>
+        <div class="rightpane">
+          <div class="chat-header">
+            Selling Wonderful item
+          </div>
+          <div class="chat-body">
+*/ }
+  body .app {
+    align-items: center;
+    background: #f0f8ff;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    height: 100%; }
+  body .nav {
+    flex: 0 0 57px;
+    line-height: 56px;
+    position: relative;
+    width: 100%;
+    z-index: 5;
+    background-color: red; }
+  body .email-confirm {
+    background-color: blue;
+    flex: 0 0 57px;
+    line-height: 56px;
+    position: relative;
+    width: 100%;
+    z-index: 5; }
+  body .content {
+    flex: 1 1 auto;
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+    position: relative; }
+  body .landing {
+    width: 100%;
+    white-space: pre-wrap;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; }
+  body .chat {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #ddd; }
+  body .left-pane {
+    width: 100%;
+    height: 100%;
+    background-color: #fef;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; }
+  body .right-pane {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #eff;
+    overflow: hidden; }
+  @media only screen and (min-width: 321px) and (max-width: 1023px) {
+    body .chat {
+      padding: 0; }
+    body .left-pane, body .right-pane {
+      display: none; }
+    body .left-pane.active {
+      display: block; }
+    body .right-pane.active {
+      display: flex; } }
+  body .chat-header {
+    flex: 0 0 57px;
+    line-height: 56px;
+    position: relative;
+    width: 100%;
+    z-index: 5;
+    background-color: #ffd; }
+  body .chat-body {
+    width: 100%;
+    white-space: pre-wrap;
+    flex: 1 1 auto;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; }
+  body .chat-input {
+    line-height: 40px;
+    flex: 0 0 40px;
+    width: 100%;
+    z-index: 9; }
+    body .chat-input input {
+      width: 100%; }
+  body .nav span {
+    cursor: pointer; }
+  body #back {
+    display: none; }
+    @media only screen and (min-width: 321px) and (max-width: 1023px) {
+      body #back {
+        display: inline; } }
